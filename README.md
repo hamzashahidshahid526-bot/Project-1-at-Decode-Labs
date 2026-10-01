@@ -52,7 +52,7 @@ Decode-Labs-Project-1/
 <h2>🚀 How to Run Locally</h2>
 <pre>
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/hamzashahidshahid526-bot/Project-1-at-Decode-Labs.git
 
 # 2. Install dependencies
 pip install fastapi uvicorn
