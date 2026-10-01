@@ -64,22 +64,6 @@ uvicorn project:app --reload
 http://127.0.0.1:8000/docs
 </pre>
 
-<h2>🧪 Testing Proof</h2>
-
-<h3>1. Server Running</h3>
-<img src="screenshots/1_server_running.png" width="100%">
-
-<h3>2. POST /users - 201 Created</h3>
-<img src="screenshots/2_post_201.png" width="100%">
-
-<h3>3. GET /users - Count + Data</h3>
-<img src="screenshots/3_get_all_count.png" width="100%">
-
-<h3>4. GET Single User - 200 & 404 Handling</h3>
-<img src="screenshots/4_get_single_200_and_404.png" width="100%">
-
-<h3>5. Direct /users JSON Response</h3>
-<img src="screenshots/5_browser_users_direct.png" width="100%">
 
 <hr>
 
