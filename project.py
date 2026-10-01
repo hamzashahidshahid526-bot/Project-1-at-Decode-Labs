@@ -18,8 +18,12 @@ def get_users():
 
 @app.post("/users", status_code=201)
 def create_user(user: User):
-    user_db.append(user.dict())
-    return {"message": "User created successfully", "data": user.dict()}
+    for u in user_db:
+        if u["id"] == user.id:
+            raise HTTPException(
+                status_code=400, detail="User with this ID already exists")
+    user_db.append(user.model_dump())
+    return {"message": "User created successfully", "data": user.model_dump()}
 
 
 @app.get("/users/{user_id}", status_code=200)
@@ -27,4 +31,4 @@ def get_user(user_id: int):
     for u in user_db:
         if u["id"] == user_id:
             return {"data": u}
-    return {"message": "User not found", "code": 404}
+    raise HTTPException(status_code=404, detail="User not found")
