@@ -34,5 +34,4 @@ def get_user(user_id: int):
     for u in user_db:
         if u["id"] == user_id:
             return {"data": u}
-
     raise HTTPException(status_code=404, detail="User not found")
